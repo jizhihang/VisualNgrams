@@ -79,10 +79,12 @@ for f = list_of_ims
             if featExtMode == 1         % thumnail image
                 dwncmd = ['python ' filenameWithPath ' ' ...
                     [cachedir '/images/' cls '/'] ' ' '''' 'tbUrl' '''' ' ' '''' phrasenames{f} ''''];
+                disp(dwncmd);
                 [~, b] = system(dwncmd);                                
             elseif featExtMode == 2     % full image
                 dwncmd = ['python ' filenameWithPath ' ' ...
                     [cachedir '/images/' cls '/'] ' ' '''' 'url' '''' ' ' '''' phrasenames{f} ''''];
+                disp(dwncmd);
                 [~, b] = system(dwncmd);
                 ids = mydir([cachedir '/images/' cls '/*.jpg'], 1);                
                 resizeGoogImages(ids, maxImgReSize);

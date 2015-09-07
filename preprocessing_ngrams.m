@@ -87,7 +87,7 @@ if DO_NGRAM_CORPUS_DWNLD            % download (from https://books.google.com/ng
 end
 
 %#########################################################################################################
-DO_VOC2007_COPY = 1;                % set this to 1 only if running this script for the first time
+DO_VOC2007_COPY = 0;                % set this to 1 only if running this script for the first time
 if DO_VOC2007_COPY                  % copy voc images (useful for negatives, need not do for every object)
     disp('copy VOC images & annotations; softlink it to Datasets directory ');
     copyVOC2007dataToNgramData(voc07dir, jpgimagedir, annosetdir, imgsetdir_voc);

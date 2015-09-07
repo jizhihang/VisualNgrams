@@ -1,0 +1,1 @@
+export PATH=$PATH:/projects/grail/santosh/softs/phantomjs-1.9.7-linux-x86_64/bin

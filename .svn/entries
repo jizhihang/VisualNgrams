@@ -1,0 +1,225 @@
+10
+
+dir
+13
+file:///projects/grail/santosh4/svnRepository/objectNgrams/trunk/code
+file:///projects/grail/santosh4/svnRepository
+
+
+
+2014-05-21T20:59:06.947046Z
+13
+santosh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f86be964-4e39-497d-9f55-53ad1cc991bd
+
+getResultsSummary
+dir
+
+jointTraining
+dir
+
+imgClsPruning
+dir
+
+masterScript_ngrams.m
+file
+
+
+
+
+2014-05-07T16:52:51.055675Z
+b7ff9e2d5c3c3ef3bbffaf4d33124e07
+2014-05-21T20:59:06.947046Z
+13
+santosh
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+35678
+
+cosegment
+dir
+
+searchNgramData
+dir
+
+utilScripts
+dir
+
+downloadNgramData
+dir
+
+myDPM
+dir
+
+downloadImages
+dir
+
+contextNexpertSel
+dir
+
+other_codes
+dir
+
+deepFeats
+dir
+
+computeSimilarity_coref
+dir
+
+this_util
+dir
+
+displayNvis
+dir
+
+getSuperNgrams
+dir
+
+blah
+dir
+
+
+
+delete
+
+myaddpath.m
+file
+
+
+
+
+2014-03-04T05:05:30.756733Z
+0a23b926eca53cf57d380cfd2a528b24
+2014-03-17T17:28:46.965277Z
+6
+santosh
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1144
+
+COPYING
+file
+
+
+
+
+2014-01-20T21:25:07.879724Z
+aa17d4ead360a3d2db61cbd0da76892e
+2014-01-26T03:54:58.912449Z
+2
+santosh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1267
+
+removeDuplicates
+dir
+
+README.txt
+file
+
+
+
+
+2013-12-10T22:44:26.652857Z
+60473bcf6678c66994ac2e4e7b9dd110
+2014-01-26T03:54:58.912449Z
+2
+santosh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5591
+
+createMetaTxtXmlFiles
+dir
+

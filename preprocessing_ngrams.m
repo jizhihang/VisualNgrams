@@ -220,7 +220,8 @@ for objind = OBJINDS            % run either all concepts or a selected concept
         [~, numngrams] = system(['wc -l ' inpfname_imgcl ' | cut -f1 -d '' '' ']); numngrams = str2num(numngrams);
         if areAllFilesDone(ngramImgClfrdir_obj, numngrams, [], 1) ~= 0
             numjobsImgCls = min(100, areAllFilesDone(ngramImgClfrdir_obj, numngrams, [], 1));
-            if numjobsImgCls < 10   % if only a few ngrams, then run locally (otherwise on cluster)
+            %if numjobsImgCls < 10   % if only a few ngrams, then run locally (otherwise on cluster)
+            if 1                     % only locally
                 pascal_img_trainNtestNeval_fast(ngramImgClfrdir_obj, inpfname_imgcl, trainyear, objname, imgannodir);
             else
                 compileCode_v2_depfun('pascal_img_trainNtestNeval_fast',1,'googleimages_dsk.py');
@@ -275,7 +276,8 @@ for objind = OBJINDS            % run either all concepts or a selected concept
         end
         
         numjobsDld = min(15, areAllFilesDone(rawgoogimgdir_obj, numngrams, [], 1)); % if samapi==1, then 15 only
-        if numjobsDld <= 10
+        %if numjobsDld <= 10       % if only a few, then run locally (otherwise on cluster)
+        if 1                       % only locally
             downloadGoogImgs(ngramfname_dwld, rawgoogimgdir_obj);
         else
             compileCode_v2_depfun('downloadGoogImgs', 1, 'samGoogDownload.sh', 'samYahooDownload.sh', 'googleimages_dsk.py', 'samGoogPhantomDownload.sh', 'google-images.js');
@@ -358,7 +360,7 @@ for objind = OBJINDS            % run either all concepts or a selected concept
         if areAllFilesDone(cachedir, numimgs, [], 1) ~= 0
             numjobsImgDups = min(100, areAllFilesDone(cachedir, numimgs, [], 1));
             compileCode_v2_depfun('findNearDuplicates_hashing',1);            
-            multimachine_grail_compiled(['findNearDuplicates_hashing ' cachedir ' ' dtype], numimgs, cachedir, numjobsImgDups, [], qnameval, 8, 0, OVERWRITE, 0);
+            %multimachine_grail_compiled(['findNearDuplicates_hashing ' cachedir ' ' dtype], numimgs, cachedir, numjobsImgDups, [], qnameval, 8, 0, OVERWRITE, 0);
             areAllFilesDone(cachedir, numimgs);
             %findNearDuplicates_hashing(cachedir, dtype);            
         end

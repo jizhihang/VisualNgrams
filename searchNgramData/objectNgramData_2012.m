@@ -4,7 +4,8 @@ try
     
 if isdeployed, ngramtype = str2num(ngramtype); end
 
-mymatlabpoolopen; 
+%mymatlabpoolopen;
+mymatlabpoolopen(2);
 
 tmpdir = [outdir '/tempFiles_' num2str(ngramtype) '/'];
 mymkdir(tmpdir);

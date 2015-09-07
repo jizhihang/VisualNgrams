@@ -24,7 +24,7 @@ valdatatype2 = 'val2';                      % what type of data to validate the 
 %%% main path names
 voc07dir = '/zfs/isis1/zhenyang/Workspace/data/PASCAL/VOC2007/'; % path to the voc 2007 data (whose images are used as background/negative data for training all models)
 basedir = '/datastore/zhenyang/Workspace/devel/project/vision/VisualNgrams/';   % main project folder (with the code, results, etc)
-wwwdir = '/projects/grail/www/projects/visual_ngrams/display/';                 % path to store/see visualizations on the web (contact support@cs to get space on the UW CSE WWW server)
+wwwdir = '/zfs/isis1/zhenyang/Workspace/data/visual_ngrams/display/';                 % path to store/see visualizations on the web (contact support@cs to get space on the UW CSE WWW server)
 wwwweburl = 'http://grail.cs.washington.edu/projects/visual_ngrams/display/';
 resultsdir = fullfile(basedir, 'results');
 imgannodir = [resultsdir '/VOC9990/']; mymkdir(imgannodir);
@@ -111,7 +111,7 @@ for objind = OBJINDS            % run either all concepts or a selected concept
     ngramModeldir_obj = [resultsdir '/ngram_models/' objname '/' ['kmeans_' num2str(dpm.numcomp)] '/']; mymkdir(ngramModeldir_obj); % to save data/results for DPM 
     baseobjdir = [ngramModeldir_obj '/baseobjectcategory_' objname '_SNN_buildTree_Comp/']; mymkdir(baseobjdir);% to save data/results of the merged model
     wwwdispdir_part = [objname '_trainNtestVis/'];
-    wwwdispdir = [wwwdir '/' wwwdispdir_part]; mymkdir(wwwdispdir);  % to save visualizations on web server (for viewing over the web)
+    wwwdispdir = [wwwdir '/' wwwdispdir_part];%  mymkdir(wwwdispdir);  % to save visualizations on web server (for viewing over the web)
     fname_imgcl_sprNg = [ngramImgClfrdir_obj '/' objname '_all_fastClusters_super.txt'];                      % to save all the (super) ngram names associated with a concept    
     
     diary([resultsdir '/ngram_models/' objname '/diaryOutput_all.txt']);        % save a log of the entire run for debugging/record purposes

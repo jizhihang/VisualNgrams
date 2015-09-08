@@ -53,6 +53,7 @@ for f = list_of_ims
             filenameWithPath=which('samGoogDownload.sh');       %'/projects/grail/santosh/objectNgrams/code/downloadImages/samGoogDownload.sh '
             dwncmd = [filenameWithPath ' ' ...
                 thisdowndir ' ' '''' phrasenames{f} '''' ' ' num2str(numImages) ' 20 on itp:photo,ic:color'];
+            disp(dwncmd);
             [~, b] = system(dwncmd);
         elseif samapi == 2
             filenameWithPath=which('samYahooDownload.sh');       %'/projects/grail/santosh/objectNgrams/code/downloadImages/samGoogDownload.sh '

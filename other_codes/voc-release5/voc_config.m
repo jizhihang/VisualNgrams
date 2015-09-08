@@ -129,7 +129,7 @@ conf.threshs.numImgsToDwnldFrmGoog = 200;
 conf.threshs.numThumbImgsToDwnldFrmGoog = 64;
 conf.threshs.weirdAspectThresh = 0.4;
 conf.threshs.maxImgSize = 500;
-conf.threshs.samapi = 4;        % see downloadGoogImgs.m
+conf.threshs.samapi = 1;        % see downloadGoogImgs.m
 if conf.threshs.samapi == 1 || conf.threshs.samapi == 2 || conf.threshs.samapi == 4    % sam's goog or Y! api or googPhantom api
     conf.threshs.pcntTrngImgsPerNgram = 58/100;
     conf.threshs.pcntValImgsPerNgram = 40/100;

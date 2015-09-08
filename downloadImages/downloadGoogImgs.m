@@ -18,6 +18,7 @@ maxImgReSize = conf.threshs.maxImgSize;
 weirdAspectThresh = conf.threshs.weirdAspectThresh;
 minNumImgs = conf.threshs.minNumImgsDownloadCheck;
 samapi =  conf.threshs.samapi;
+samapi
 
 [~, phrasenames] = system(['cat ' inpfname]);
 phrasenames = regexp(phrasenames, '\n', 'split');

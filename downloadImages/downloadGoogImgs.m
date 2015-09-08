@@ -12,13 +12,12 @@ disp(['downloadGoogImgs(''' inpfname ''',''' downdir ''')' ]);
 [~, sysname] = system('hostname');
 disp(sysname);
 
-conf = voc_config('paths.model_dir', '/tmp/tmpdir_for_vocconfig/');
+conf = voc_config('paths.model_dir', '/zfs/isis1/zhenyang/Workspace/data/tmp/tmpdir_for_vocconfig/');
 numImages =  conf.threshs.numImgsToDwnldFrmGoog;
 maxImgReSize = conf.threshs.maxImgSize;
 weirdAspectThresh = conf.threshs.weirdAspectThresh;
 minNumImgs = conf.threshs.minNumImgsDownloadCheck;
 samapi =  conf.threshs.samapi;
-samapi
 
 [~, phrasenames] = system(['cat ' inpfname]);
 phrasenames = regexp(phrasenames, '\n', 'split');
@@ -70,6 +69,7 @@ for f = list_of_ims
             filenameWithPath=which('samGoogPhantomDownload.sh');       %'/projects/grail/santosh/objectNgrams/code/downloadImages/samGoogDownload.sh '
             dwncmd = [filenameWithPath ' ' ...
                 thisdowndir ' ' '''' phrasenames{f} '''' ' ' num2str(numImages) ' 20 on itp:photo,ic:color'];
+            disp(dwncmd);
             [~, b] = system(dwncmd);
             pause(30);  % introducing a 30sec wait so that goog doesn't think we are a bot
         end        

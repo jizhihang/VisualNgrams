@@ -45,7 +45,7 @@ dpm.numcomp = 6;                    % number of components for training DPM
 dpm.wsup_fg_olap = 0.25;            % amount of foreground overlap (with ground-truth bbox)
 dpm.borderoffset = 0.07;            % amount of image border to ignore (e.g., if its a 100pixel image, ignore a 8-pixel margin (7/100*500))
 dpm.jointCacheLimit = 2*(3*2^30);   % amount of RAM for training DPM
-conf = voc_config('paths.model_dir', '/tmp/tmpdir_for_vocconfig/');
+conf = voc_config('paths.model_dir', '/zfs/isis1/zhenyang/Workspace/data/tmp/tmpdir_for_vocconfig/');
 
 %%% pre-processing (to be done once for all concepts)
 DO_NGRAM_CORPUS_DWNLD = 0;          % set this to 1 only if running this script for the first time

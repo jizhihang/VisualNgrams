@@ -110,7 +110,7 @@ conf = cv(conf, 'single_byte_size', 4);
 % -------------------------------------------------------------------
 % Various Paths & Thresholds (set using cross-validation) 
 % -------------------------------------------------------------------
-conf.devkitroot = '/projects/grail/santosh/Datasets/Pascal_VOC/';   % path to VOC2007 data
+conf.devkitroot = '/zfs/isis1/zhenyang/Workspace/data/PASCAL/VOC2007/';   % path to VOC2007 data
 conf.esvmmodfile = '/projects/grail/santosh/objectNgrams/results/tomasz_esvm/hog_covariance_pascal_voc2007_trainval.mat';   % can be downloaded from http://people.csail.mit.edu/tomasz/hog_covariance_pascal_voc2007_trainval.mat
 conf.webbasedir = '/projects/grail/santosh/objectNgrams/results/webdata/';
 conf.threshs.minNgramFreqInBooks = 200;  % changed to 200 from 100 on 17Mar13 (based on analysis; see my 17Mar13 notes)

@@ -17,7 +17,7 @@ end
 
 %%% main path names
 voc07dir = '/zfs/isis1/zhenyang/Workspace/data/PASCAL/VOC2007/'; % path to the voc 2007 data (whose images are used as background/negative data for training all models)
-basedir = '/datastore/zhenyang/Workspace/devel/project/vision/VisualNgrams/code/LEVAN_results'; % main project folder (with the code, results, etc)
+basedir = '/datastore/zhenyang/Workspace/devel/project/vision/VisualNgrams/code/LEVAN_models'; % main project folder (with the code, results, etc)
 wwwdir = 'http://levan.cs.uw.edu/download_concept.php?concept=%s';
 modelsdir = fullfile(basedir, 'models'); mymkdir(modelsdir);
 resultsdir = fullfile(basedir, 'results'); mymkdir(resultsdir);

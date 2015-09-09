@@ -32,7 +32,7 @@ for objind = OBJINDS            % run either all concepts or a selected concept
 
     % set all the path names for this concept
     rawgoogimgdir_obj = [resultsdir '/googImg_data/' objname]; mymkdir(rawgoogimgdir_obj);        % to save images downloaded from google
-    ngramModeldir_obj = [resultsdir '/ngram_models/' objname]; mymkdir(ngramDatadir_obj);         % to save ngram models
+    ngramModeldir_obj = [resultsdir '/ngram_models/' objname]; mymkdir(ngramModeldir_obj);         % to save ngram models
 
     diary([ngramModeldir_obj '/diaryOutput_all.txt']);        % save a log of the entire run for debugging/record purposes
 

@@ -35,7 +35,7 @@ htmlsplit() { tr '\n\r \t' ' ' | sed 's/</\n</g; s/>/>\n/g; s/\n *\n/\n/g; s/^ *
 #--bind-address=$USERIP 
 for start in `seq 0 20 $[$count-1]`; do
 
-echo >.log 'wget -U"$agent1" -T"$timeout" --tries="$tries" -O- "$url&start=$start" | htmlsplit'
+echo >>.log "wget -U$agent1 -T$timeout --tries=$tries -O- $url&start=$start | htmlsplit"
 wget -U"$agent1" -T"$timeout" --tries="$tries" -O- "$url&start=$start" | htmlsplit
 sleep 10
 done | perl -ne 'use HTML::Entities; /^<a .*?href="(.*?)"/ and print decode_entities($1), "\n";' | grep '/imgres?' |

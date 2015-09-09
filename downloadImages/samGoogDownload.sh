@@ -42,7 +42,7 @@ done | perl -ne 'use HTML::Entities; /^<a .*?href="(.*?)"/ and print decode_enti
 perl -ne 'use URI::Escape; ($img, $ref) = map { uri_unescape($_) } /imgurl=(.*?)&imgrefurl=(.*?)&/;
 $ext = $img; for ($ext) { s,.*[/.],,; s/[^a-z0-9].*//i; $_ ||= "img"; }
 $save = sprintf("%04d.$ext", ++$i); print join("\t", $save, $img, $ref), "\n";' |
-tee -a .images.tsv |
+tee -a .images.tsv #|
 #while IFS=$'\t' read -r save img ref; do
 #wget -U"$agent2" -T"$timeout" --tries="$tries" --referer="$ref" -O "$save" "$img" || rm "$save" &
 #procs=$[$procs + 1]; [ $procs = $parallel ] && { wait; procs=0; }

@@ -70,7 +70,7 @@ for objind = OBJINDS            % run either all concepts or a selected concept
     fid = fopen(fname_model_imgs, 'w');
     for ng = 1:nNgs
         
-        %%% 
+        %%% for ngram mkdir
         Ngdir = strrep(premodel.model.phrasenames{ng}, ' ', '_');
         imgNgdir_obj = [rawgoogimgdir_obj '/' Ngdir]; mymkdir(imgNgdir_obj);
 

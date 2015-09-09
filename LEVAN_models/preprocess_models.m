@@ -22,6 +22,10 @@ wwwdir = 'http://levan.cs.uw.edu/download_concept.php?concept=%s';
 modelsdir = fullfile(basedir, 'models'); mymkdir(modelsdir);
 resultsdir = fullfile(basedir, 'results'); mymkdir(resultsdir);
 
+%%% global variables
+timeout = 10;
+tries = 10;
+
 %#########################################################################################################
 %%% main code
 for objind = OBJINDS            % run either all concepts or a selected concept
@@ -79,7 +83,7 @@ for objind = OBJINDS            % run either all concepts or a selected concept
             imgurl = premodel.poscell{ng}(ig).imgurl;
             [~,imgname,imgext] = fileparts(imgurl);
             imgfilename = [imgNgdir_obj '/' Ngdir '_' num2str(ig) '.' imgext];
-            system(['wget -O ' imgfilename ' ' imgurl]);
+            system(['wget -T ' num2str(timeout) ' --tries=' num2str(tries) ' -O ' imgfilename ' ' imgurl]);
 
             fprintf(fid, '%s %s\n', imgfilename, imgurl);
         end

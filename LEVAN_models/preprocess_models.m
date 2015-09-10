@@ -24,7 +24,7 @@ resultsdir = fullfile(basedir, 'results'); mymkdir(resultsdir);
 
 %%% global variables
 timeout = 10;
-tries = 10;
+tries = 5;
 
 %#########################################################################################################
 %%% main code

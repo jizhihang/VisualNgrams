@@ -83,6 +83,6 @@ for objind = OBJINDS            % run either all concepts or a selected concept
     end
     myprintfn;
     myprintfn;
-
-    fid.close();
+    
+    fclose(fid);
 end
